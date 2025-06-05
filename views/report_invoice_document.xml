@@ -1,0 +1,12 @@
+<odoo>
+  <template id="report_invoice_inherit_pre_number" inherit_id="account.report_invoice_document">
+    <xpath expr="//div[hasclass('row')][1]" position="inside">
+      <t t-if="o.state == 'draft' and o.pre_invoice_number">
+        <div class="col-12">
+          <strong>Pre-Factura No:</strong>
+          <span t-esc="o.pre_invoice_number"/>
+        </div>
+      </t>
+    </xpath>
+  </template>
+</odoo>
